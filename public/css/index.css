@@ -1,10 +1,17 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Texturina&display=swap');
+
 :root{
     --darkGreen: #61892f;
     --lightGreen: #86c232;
     --dark: #222629;
     --darkGrey: #474b4f;
     --lightGrey: #6b6e70;    
+    --font1: 'Roboto', sans-serif;
+    --font2: 'Itim', cursive;
+    --font3: 'Texturina', serif;;
 }
 html , body{
     margin: 0px;
@@ -16,10 +23,42 @@ header{
 }
 #navbar{
     display: flex;
+    justify-content: flex-start;
+    align-items: center;
     width: 100%;
     height: 70px;
-    background-color: var(--darkGrey)
+    background-color: black;
 }
+#nav-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 95%;
+    margin: 0px 20px;
+}
+#nav-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 95%;
+    margin: 0px 20px;
+    font-size: 2.5rem;
+    color: var(--lightGreen);
+    font-weight: bolder;
+    font-family: var(--font3);
+}
+#nav-desc{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 70%;
+    margin: 0px 10px;
+    padding: 10px 0px;
+    font-size: 1.7rem;
+    color: white;
+    font-family: var(--font2);
+}
+
 #main-section{
     display: flex;
     justify-content: center;
@@ -34,16 +73,18 @@ header{
     justify-content: flex-start;
     align-items: center;
     width: 80%;
-    height: 15%;
+    height: 10%;
     margin: 10px 20px;
     font-size: 4rem;
+    color: var(--lightGreen);
+    font-weight: bold;
 }
 #main-container{
     display: flex;
     justify-content: flex-start;
     align-items: center;
     width: 90%;
-    height: 80%;
+    height: 95%;
     margin: 10px 10px;
 }
 #signin-form-container{
@@ -51,9 +92,10 @@ header{
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
+    background-color: var(--lightGreen);
     width: 40%;
-    height: 70%;
-    margin: 20px;
+    height: 50%;
+    margin: 30px 20px;
     border: solid 2px black;
     border-radius: 20px;
 }
@@ -63,7 +105,12 @@ header{
     align-items: center;
     width: 90%;
     margin: 10px;
+    padding: 0px 20px;
     font-size: 2.5rem;
+    color: white;
+    background-color: black;
+    border-radius: 10px;
+    font-family: var(--font1);
 }
 #signin-form{
     display: flex;
@@ -79,9 +126,11 @@ header{
     align-items: center;
     margin: 10px;
     width: 60%;
-    height: 30px;
+    height: 40px;
     outline: none;
-
+    border-radius: 10px;
+    font-family: var(--font1);
+    font-size: 1.2rem;
 }
 .form-field input{
     height: 90%;
@@ -89,6 +138,7 @@ header{
 #sign-in-error-box{
     height: 10px;
     font-size: 1.2rem;
+    color: red;
 }
 #signin-btn{
     display: flex;
@@ -97,11 +147,51 @@ header{
     margin: 10px;
     height: 40px;
     width: 30%;
+    font-size: 1.2rem;
+    font-weight: bolder;
 }
 
 #about-container{
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 70%;
+    height: 95%;
 }
+#about-image-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    height: 50%;
+    margin: 20px;
+}
+#about-image-container img{
+    max-width: 95%;
+    max-height: 95%;
+}
+#about-content-container1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: var(--font2);
+    color: white;
+}
+#about-content-container2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    font-family: var(--font1);
+    color: rgb(192, 37, 37);
+}
+
 #section2{
     display: flex;
     width: 100%;

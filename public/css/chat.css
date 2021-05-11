@@ -117,8 +117,10 @@ header{
     width: 95%;
     height: 80%;
     margin: 10px;
-    background: url('../media/chat_background1.png');
+    background: url('../media/chat_background2.png');
     background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     overflow-y: scroll;
 }
 .left-message-box-container{
