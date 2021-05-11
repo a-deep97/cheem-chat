@@ -112,16 +112,26 @@ header{
 }
 .right-message-box-container{
     display: flex;
-    justify-content: flex-end
-
+    justify-content: flex-end;
+    width: 100%;
+    margin: 5px 0px;
 }
-.message-container{
+.left-message-container{
     display: flex;
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
     margin: 5px 20px;
     margin-right: 60px;
+    background-color: var(--darkGreen);
+}
+.right-message-container{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    margin: 5px 20px;
+    margin-left: 60px;
     background-color: var(--darkGreen);
 }
 .message-info{
@@ -138,7 +148,7 @@ header{
     align-items: center;
     width: 80%;
     padding: 0px 20px;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: bold;
 }
 .message-time{
@@ -153,7 +163,7 @@ header{
     justify-content: center;
     align-items: center;
     margin: 10px 20px;
-    
+    font-size: 1.2rem;
 }
 #message-form-container{
     display: flex;

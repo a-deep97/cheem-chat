@@ -25,9 +25,20 @@ socket.on('disconnect',()=>{
 socket.on('user left',({username})=>{
     console.log(username+'  has left the chat');
 });
-const message='hello';
-socket.emit('send message',{message});
 
-socket.on('recieve message',({username,message,time})=>{
-    console.log(username+': '+message+' at '+ time );
+//send message with button event
+const messageForm=document.getElementById('message-form');
+messageForm.addEventListener('submit',(e)=>{
+    e.preventDefault();
+    const message=e.target.message.value.trim();
+    createSentMessage(message);
+
+    //send message to server
+    socket.emit('send message',message);
+});
+
+//event on recivinf message from server
+socket.on('receive message',(messageData)=>{
+    
+    createReceiveMessage(messageData);
 });

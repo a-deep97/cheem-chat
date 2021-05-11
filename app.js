@@ -4,6 +4,7 @@ const http=require('http').Server(app);
 const io=require('socket.io')(http);
 
 const USERS =require('./server utility/users');
+const formatMessage=require('./server utility/format_message');
 
 app.use(express.static('public'));
 
@@ -36,13 +37,17 @@ io.on('connection',(socket)=>{
     });
 
     //event for sending message by client
-    socket.on('send message',({msg})=>{
+    socket.on('send message',(message)=>{
+        
+        //get the user from local database
         const user=USERS.getUser(socket.id);
-        const username=user.username;
-        const message=msg;
-        const time='15:00';
-        //event for broadcasting message by the client
-        socket.broadcast.to(user.room).emit('recieve message',{username,message,time});
+
+        //broadcast message to the desired room if user exists
+        if(user){
+            const username=user.username;
+            socket.broadcast.to(user.room).emit('receive message',formatMessage(username,message));
+        }
+        
     }); 
 });
 
