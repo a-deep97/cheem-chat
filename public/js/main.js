@@ -54,10 +54,10 @@ socket.on('receive message',(messageData)=>{
 
 //event to get online users
 socket.on('online users',(roomUsers)=>{
-    //updates online user panel
+    //updates online user
     const onlinePanel=document.getElementById('online-users');
     onlinePanel.innerHTML='';
     for(var i=0;i<roomUsers.length;i++){
         addOnlineUsers(roomUsers[i].username);
     }
-})
+});
