@@ -19,8 +19,8 @@ io.on('connection',(socket)=>{
 
     });
 
-    //event on client disconnection
-    socket.on('disconnect',()=>{
+    //event on user disconnection
+    socket.on('user disconnection',()=>{
 
     });
 
