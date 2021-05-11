@@ -10,7 +10,11 @@
 </head>
 <body>
     <header></header>
-    <nav id="navbar"></nav>
+    <nav id="navbar">
+        <div id="nav-icon"></div>
+        <div id="nav-title">CHEEM CHAT</div>
+        <div id="nav-desc">Chat in groups anonymously</div>
+    </nav>
     <section id="main-section">
         <div id="description-container"></div>
         <div id="chat-container">
@@ -39,7 +43,7 @@
                 </div>
                 <div id="message-form-container">
                     <form action="" id="message-form">
-                        <input type="text" id="message-input" name="message">
+                        <input type="text" id="message-input" name="message" placeholder="type message..." required>
                         <button type="submit" id="message-send-btn">Send</button>
                     </form>
                 </div>
