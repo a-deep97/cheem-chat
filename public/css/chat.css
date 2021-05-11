@@ -34,6 +34,7 @@ header{
     align-items: center;
     height: 95%;
     margin: 0px 10px;
+    cursor: pointer;
 }
 #nav-icon img{
     max-width: 90%;
