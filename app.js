@@ -3,6 +3,7 @@ const app=express();
 const http=require('http').Server(app);
 const io=require('socket.io')(http);
 
+const USERS =require('./server utility/users');
 
 app.use(express.static('public'));
 
@@ -15,8 +16,13 @@ app.get('/',(req,res)=>{
 io.on('connection',(socket)=>{
 
     //event for new joining client
-    socket.on('on join',({})=>{
+    socket.on('on join',({id,username,ip,room})=>{
+        const userID=socket.id;
+        const userIP=socket.request.connection.remoteAddress;
+        USERS.addUser(userID,username,userIP,room);
 
+        //broadcat new user
+        socket.broadcast.to(room).emit('new user',{username});
     });
 
     //event on user disconnection
