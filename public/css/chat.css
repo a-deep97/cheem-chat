@@ -86,13 +86,18 @@ header{
     flex-direction: column;
     width: 95%;
     margin: 5px;
+    border: solid 2px var(--darkGreen);
 }
 .online-user{
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     padding: 0px 10px;
     font-size: 1.5rem;
+    margin: 5px;
+    width: 90%;
+    color: white;
+    font-weight: bold;
 }
 #chat-inbox{
     display: flex;
@@ -112,7 +117,8 @@ header{
     width: 95%;
     height: 80%;
     margin: 10px;
-    background-color: aliceblue;
+    background: url('../media/chat_background1.png');
+    background-position: center;
     overflow-y: scroll;
 }
 .left-message-box-container{
@@ -134,7 +140,7 @@ header{
     flex-direction: column;
     margin: 5px 20px;
     margin-right: 60px;
-    background-color: var(--darkGreen);
+    background-color: var(--lightGreen);
 }
 .right-message-container{
     display: flex;
@@ -143,7 +149,7 @@ header{
     flex-direction: column;
     margin: 5px 20px;
     margin-left: 60px;
-    background-color: var(--darkGreen);
+    background-color: var(--lightGreen);
 }
 .message-info{
     display: flex;
@@ -161,6 +167,7 @@ header{
     padding-left: 5px;
     font-size: 1.2rem;
     font-weight: bold;
+    color: white;
 }
 .message-time{
     display: flex;
@@ -168,6 +175,7 @@ header{
     align-items: center;
     width: 20%;
     padding: 0px 10px;
+    color: var(--lightGrey);
 }
 .message-box{
     display: flex;
