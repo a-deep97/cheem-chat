@@ -92,7 +92,7 @@ header{
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-    background-color: var(--lightGreen);
+    background-color: var(--darkGreen);
     width: 40%;
     height: 50%;
     margin: 30px 20px;
