@@ -13,6 +13,8 @@ addUser(username,room);
 socket.emit('on join',{username,room});
 //signal recieved from server when user joined
 socket.on('user joined',(roomUsers)=>{
+    //auto scroll
+    scrollChatBox();
     //update online user panel as userjoins
     const onlinePanel=document.getElementById('online-users');
     onlinePanel.innerHTML='';
@@ -40,16 +42,33 @@ const messageForm=document.getElementById('message-form');
 messageForm.addEventListener('submit',(e)=>{
     e.preventDefault();
     const message=e.target.message.value.trim();
-    createSentMessage(message);
+    //finding current time
+    var date=new Date();
+    var time = date.getHours()+":"+date.getMinutes();
+    //adding message to message log
+    addMessage(getUser().room,'you',message,time);
+    //creating messsage for self
+    createSentMessage(message,time);
+    
+    //auto scroll
+    scrollChatBox();
 
     //send message to server
-    socket.emit('send message',message);
+    socket.emit('send message',(message));
+
+    // Clear message input
+    e.target.elements.message.value = '';
 });
 
 //event on recivinf message from server
 socket.on('receive message',(messageData)=>{
     
+    //adding message to message log
+    addMessage(messageData.username,messageData.message,messageData.time);
+    //create received message box
     createReceiveMessage(messageData);
+    //auto scroll
+    scrollChatBox();
 });
 
 //event to get online users

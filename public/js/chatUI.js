@@ -2,7 +2,7 @@
 //chat box element
 const chatBox=document.getElementById('chat-box');
 
-function createSentMessage(message){
+function createSentMessage(message,time){
 
     const rightMessageBoxContainer=document.createElement('div');
     rightMessageBoxContainer.className='right-message-box-container';
@@ -29,8 +29,6 @@ function createSentMessage(message){
     //put username value in the username field
     messageUsername.innerHTML='You';
     //put time in the time field
-    var date=new Date();
-    var time = date.getHours()+":"+date.getMinutes();
     messagetime.innerHTML=time;
     //put message value in the message field
     messageBox.innerHTML=message;
@@ -82,4 +80,9 @@ function addOnlineUsers(username){
     onlineUser.innerHTML=username;
 
     onlineUsers.appendChild(onlineUser);
+}
+
+//auto scroll chatbox
+function scrollChatBox(){
+    chatBox.scrollTop=chatBox.scrollHeight;
 }
