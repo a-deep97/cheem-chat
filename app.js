@@ -16,15 +16,29 @@ app.get('/',(req,res)=>{
 //socket connection on to clients
 io.on('connection',(socket)=>{
 
-    //event for new joining client
+    //event when a user joins
     socket.on('on join',({username,room})=>{
         const userID=socket.id;
         const userIP=socket.request.connection.remoteAddress;
         USERS.addUser(userID,username,userIP,room);
         //join user to the room
         socket.join(room);
-        //broadcast new user
+
+        //get the user from local database
+        const user=USERS.getUser(socket.id);
+
+        // current room users
+        var roomUsers=USERS.roomUsers(user.room);
+
+        // emit info to new joiny
+        var roomUsers=USERS.roomUsers(user.room);
+        socket.emit('user joined',roomUsers);
+        
+        //broadcast new user info to others
         socket.broadcast.to(room).emit('new user',{username});
+
+        //broadcast current room info to others
+        socket.broadcast.to(user.room).emit('online users',roomUsers);
     });
 
     //event on user disconnection
@@ -32,7 +46,11 @@ io.on('connection',(socket)=>{
         const user= USERS.removeUser(socket.id);
         if(user){
             const username=user.username;
+            //broadcast the user left info
             socket.broadcast.to(user.room).emit('user left',{username});
+            //broadcast to current room info
+            var roomUsers=USERS.roomUsers(user.room);
+            socket.broadcast.to(user.room).emit('online users',roomUsers);
         }
     });
 

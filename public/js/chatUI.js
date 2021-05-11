@@ -72,3 +72,14 @@ function createReceiveMessage(messageData){
     //append message container to chatbox
     chatBox.appendChild(leftMessageBoxContainer);
 }
+
+//add online user to the online panel
+function addOnlineUsers(username){
+    
+    const onlineUsers=document.getElementById('online-users');
+    const onlineUser=document.createElement('div');
+    onlineUser.className='online-user';
+    onlineUser.innerHTML=username;
+
+    onlineUsers.appendChild(onlineUser);
+}

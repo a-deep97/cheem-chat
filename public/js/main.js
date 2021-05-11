@@ -11,6 +11,15 @@ addUser(username,room);
 
 //emit event to server on join
 socket.emit('on join',{username,room});
+//signal recieved from server when user joined
+socket.on('user joined',(roomUsers)=>{
+    //update online user panel as userjoins
+    const onlinePanel=document.getElementById('online-users');
+    onlinePanel.innerHTML='';
+    for(var i=0;i<roomUsers.length;i++){
+        addOnlineUsers(roomUsers[i].username);
+    }
+})
 
 //event on new user connection
 socket.on('new user',({username})=>{
@@ -42,3 +51,13 @@ socket.on('receive message',(messageData)=>{
     
     createReceiveMessage(messageData);
 });
+
+//event to get online users
+socket.on('online users',(roomUsers)=>{
+    //updates online user panel
+    const onlinePanel=document.getElementById('online-users');
+    onlinePanel.innerHTML='';
+    for(var i=0;i<roomUsers.length;i++){
+        addOnlineUsers(roomUsers[i].username);
+    }
+})
