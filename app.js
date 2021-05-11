@@ -16,24 +16,34 @@ app.get('/',(req,res)=>{
 io.on('connection',(socket)=>{
 
     //event for new joining client
-    socket.on('on join',({id,username,ip,room})=>{
+    socket.on('on join',({username,room})=>{
         const userID=socket.id;
         const userIP=socket.request.connection.remoteAddress;
         USERS.addUser(userID,username,userIP,room);
-
-        //broadcat new user
+        //join user to the room
+        socket.join(room);
+        //broadcast new user
         socket.broadcast.to(room).emit('new user',{username});
     });
 
     //event on user disconnection
-    socket.on('user disconnection',()=>{
-
+    socket.on('disconnect',()=>{
+        const user= USERS.removeUser(socket.id);
+        if(user){
+            const username=user.username;
+            socket.broadcast.to(user.room).emit('user left',{username});
+        }
     });
 
-    //event for sending message
-    socket.on('chat message',()=>{
-
-    });
+    //event for sending message by client
+    socket.on('send message',({msg})=>{
+        const user=USERS.getUser(socket.id);
+        const username=user.username;
+        const message=msg;
+        const time='15:00';
+        //event for broadcasting message by the client
+        socket.broadcast.to(user.room).emit('recieve message',{username,message,time});
+    }); 
 });
 
 

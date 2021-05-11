@@ -1,4 +1,4 @@
-const userInfo={};
+var userInfo={};
 
 function addUser(username,room){
     
