@@ -21,7 +21,7 @@ window.onload=function(){
     
     //filter message log with current room
     var filteredMessageLog=[];
-    if(messagesLog.length!=0){
+    if(messagesLog!=null){
         filteredMessageLog =messagesLog.filter(messageData=>messageData.room===urlParams.room);
     }
     updataChatBox(filteredMessageLog);
