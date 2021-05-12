@@ -73,5 +73,5 @@ io.on('connection',(socket)=>{
 
 
 //server listening
-
-http.listen(3000,()=>{console.log('server running on port 3000');});
+const PORT=process.env.PORT || 80;
+http.listen(PORT,()=>{console.log('server running on port '+PORT);});
