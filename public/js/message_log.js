@@ -3,7 +3,8 @@ var messagesLog=[];
 
 function addMessage(room,username,message,time){
     const messageData={room,username,message,time};
-    
+    console.log(messageData);
+    messagesLog=messagesLog||[];
     messagesLog.push(messageData);
 
     //storing message log in local storage
@@ -12,7 +13,6 @@ function addMessage(room,username,message,time){
 
 function getLocalStorage(){
     messagesLog=JSON.parse(localStorage.getItem('messagesLog'));
-    console.log(messagesLog);
 }
 
 //reload event
