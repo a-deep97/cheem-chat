@@ -18,12 +18,12 @@ function getLocalStorage(){
 //reload event
 window.onload=function(){
     getLocalStorage();
-    if(messagesLog){
-        //filter message log with current room
-        var filteredMessageLog=messagesLog.filter(messageData=>messageData.room===urlParams.room);
-        updataChatBox(filteredMessageLog);
-    }
+    
+    //filter message log with current room
+    var filteredMessageLog=messagesLog.filter(messageData=>messageData.room===urlParams.room);
+    updataChatBox(filteredMessageLog);
 }
+
 //update chat box
 function updataChatBox(filteredMessageLog){
     for(var i=0;i<filteredMessageLog.length;i++){
