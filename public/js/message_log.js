@@ -20,7 +20,10 @@ window.onload=function(){
     getLocalStorage();
     
     //filter message log with current room
-    var filteredMessageLog=messagesLog.filter(messageData=>messageData.room===urlParams.room);
+    var filteredMessageLog=[];
+    if(messagesLog.length!=0){
+        filteredMessageLog =messagesLog.filter(messageData=>messageData.room===urlParams.room);
+    }
     updataChatBox(filteredMessageLog);
 }
 
