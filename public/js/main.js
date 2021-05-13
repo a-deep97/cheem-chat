@@ -64,9 +64,13 @@ messageForm.addEventListener('submit',(e)=>{
 socket.on('receive message',(messageData)=>{
     
     //adding message to message log
-    addMessage(messageData.username,messageData.message,messageData.time);
+    var date=new Date();
+    var time = date.getHours()+":"+date.getMinutes();
+    addMessage(getUser().room,messageData.username,messageData.message,time);
     //create received message box
-    createReceiveMessage(messageData);
+    const username=messageData.username;
+    const message=messageData.message;
+    createReceiveMessage({username,message,time});
     //auto scroll
     scrollChatBox();
 });
