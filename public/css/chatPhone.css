@@ -168,12 +168,14 @@ header{
     margin: 2px;
 }
 .message-username{
-    padding-left: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
     font-size: 0.7rem;   
 }
 .message-time{
     font-size: 0.7rem;
-    padding: 0px 5px;
+    padding-right: 10px;
+    padding-left: 5px;
 }
 .message-box{
     margin: 2px 5px;
