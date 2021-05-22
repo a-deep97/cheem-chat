@@ -38,6 +38,7 @@ header{
 }
 #nav-desc{
     height: 70%;
+    padding: 1rem;
     margin: 0px 3px;
     padding: 10px 0px;
 }
@@ -167,12 +168,10 @@ header{
     margin: 2px;
 }
 .message-username{
-    width: 80%;
     padding-left: 3px;
-    font-size: 0.8rem;   
+    font-size: 0.7rem;   
 }
 .message-time{
-    width: 40%;
     font-size: 0.7rem;
     padding: 0px 5px;
 }

@@ -48,6 +48,7 @@ header{
 #main-container{
     flex-direction: column;
     margin: 5px 5px;
+    width: 100%;
 }
 #signin-form-container{
     align-items: center;
@@ -84,6 +85,7 @@ header{
 
 #about-container{
     flex-direction: column;
+    justify-content: flex-start;
     width: 90%;
     height: 90%;
     margin: 10px 0px;
@@ -99,16 +101,19 @@ header{
 }
 #about-content-container1{
     text-align: center;
-    margin: 20px;
-    font-size: 1rem;
+    margin: 5px;
+    font-size: 0.8rem;
 }
 #about-content-container2{
     text-align: center;
     margin: 5px;
-    font-size: 1rem;
+    font-size: 0.8rem;
 }
 
 #section2{
-    height: 2vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 5vh;
     font-size: 0.8rem;
 }
