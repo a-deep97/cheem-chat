@@ -52,6 +52,7 @@ header{
     color: var(--lightGreen);
     font-weight: bolder;
     font-family: var(--font3);
+    text-shadow: 0px 0px 10px white;
 }
 #nav-desc{
     display: flex;
@@ -63,6 +64,7 @@ header{
     font-size: 1.7rem;
     color: white;
     font-family: var(--font2);
+    text-shadow: 0px 0px 10px white;
 }
 
 #main-section{
@@ -72,7 +74,7 @@ header{
     flex-direction: column;
     width: 100%;
     height: 87vh;
-    background-color: var(--dark);
+    background-image: linear-gradient(to right,var(--dark),var(--darkGreen));
 }
 #main-heading{
     display: flex;
@@ -104,6 +106,7 @@ header{
     margin: 30px 20px;
     border: solid 2px black;
     border-radius: 20px;
+    box-shadow: 0px 0px 20px var(--lightGreen);
 }
 #signin-heading-container{
     display: flex;
@@ -117,6 +120,7 @@ header{
     background-color: black;
     border-radius: 10px;
     font-family: var(--font1);
+    text-shadow: 0px 0px 10px var(--lightGreen);
 }
 #signin-form{
     display: flex;
@@ -155,6 +159,7 @@ header{
     width: 30%;
     font-size: 1.2rem;
     font-weight: bolder;
+    box-shadow: 0px 0px 5px black;
 }
 
 #about-container{
@@ -192,10 +197,11 @@ header{
     justify-content: center;
     align-items: center;
     margin: 20px;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: bolder;
     font-family: var(--font1);
-    color: rgb(192, 37, 37);
+    color: black;
+    text-shadow: 0px 0px 5px red;
 }
 
 #section2{
