@@ -15,6 +15,8 @@ socket.emit('on join',{username,room});
 socket.on('user joined',(roomUsers)=>{
     //auto scroll
     scrollChatBox();
+    //set emoji in container
+    setEmojis();
     //update online user panel as userjoins
     const onlinePanel=document.getElementById('online-users');
     onlinePanel.innerHTML='';

@@ -278,6 +278,36 @@ header{
     font-size: 1.2rem;
     font-family: var(--font2);
 }
+#emoji-container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    width: 95%;
+    height: 00%;
+    margin: 5px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-color: #F5F5F5;
+}
+.emoji-category{
+    display: grid;
+    grid-template-columns: repeat(15,auto);
+    width: 100%;
+    margin: 5px;
+    border: solid 1px black;
+}
+.emoji-element{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3px 0px;
+    cursor: pointer;
+}
+.emoji-element:hover{
+    border: solid 1px var(--lightGreen);
+    border-radius: 10px;
+}
 #message-form-container{
     display: flex;
     justify-content: flex-start;
@@ -286,7 +316,9 @@ header{
     width: 95%;
     height: 10%;
     margin: 5px;
+    background-color: var(--lightGreen);
 }
+
 #message-form{
     display: flex;
     justify-content: center;
@@ -306,6 +338,18 @@ header{
     outline: none;
     border-radius: 10px;
 }
+#emoji-button{
+    height: 60%;
+    width: 6%;
+    margin: 10px;
+    background: url('../media/emoji_icon.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: solid 1px black;
+    border-radius: 10px;
+    cursor: pointer;
+}
 #message-send-btn{
     display: flex;
     justify-content: center;
@@ -317,6 +361,7 @@ header{
     font-size: 1.2rem;
     font-family: var(--font1);
     font-weight: bold;
+    cursor: pointer;
 }
 
 #activity-container{

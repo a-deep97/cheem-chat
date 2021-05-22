@@ -86,3 +86,40 @@ function addOnlineUsers(username){
 function scrollChatBox(){
     chatBox.scrollTop=chatBox.scrollHeight;
 }
+// emoji button
+const emojiButton=document.getElementById('emoji-button');
+emojiButton.addEventListener('click',()=>{
+    const emojiContainer=document.getElementById('emoji-container');
+    if(emojiContainer.style.height=='50%'){
+        emojiContainer.style.height='0%';
+        console.log(emojiContainer.style.height);
+    }
+    else{
+        emojiContainer.style.height='50%';
+        console.log(emojiContainer.style.height);
+    }
+});
+//set emojis in emoji container
+function setEmojis(){
+    const emojiContainer=document.getElementById('emoji-container');
+    for(var i=0;i<8;i++){
+        const emojiCategory=document.createElement('div');
+        emojiCategory.className='emoji-category';
+        for(var j=0;j<EMOJIS[i].length;j++){
+            const emojiElement=document.createElement('div');
+            emojiElement.className='emoji-element';
+            emojiElement.innerHTML=EMOJIS[i][j];
+            emojiCategory.appendChild(emojiElement);
+        }
+        emojiContainer.appendChild(emojiCategory);
+    }
+}
+//check for emoji click
+const messageInput= document.getElementById('message-input');
+
+document.addEventListener('click',(e)=>{
+    if(e.target.className=='emoji-element'){
+        messageInput.value+=e.target.innerHTML;
+        console.log(messageInput.value);
+    }
+});
