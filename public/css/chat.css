@@ -244,6 +244,9 @@ header{
     margin-right: 60px;
     background-color: var(--lightGreen);
     border-radius: 10px;
+    max-width: 600px;
+    min-width: 100px;
+    word-break: break-all;
 }
 .right-message-container{
     display: flex;
@@ -254,6 +257,9 @@ header{
     margin-left: 60px;
     background-color: var(--lightGreen);
     border-radius: 10px;
+    max-width: 600px;
+    min-width: 100px;
+    word-break: break-all;
 }
 .message-info{
     display: flex;
@@ -278,7 +284,7 @@ header{
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    width: 20%;
+    width: 40%;
     font-size: 0.8rem;
     padding: 0px 10px;
     color: var(--lightGrey);

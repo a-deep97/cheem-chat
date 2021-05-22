@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Texturina&display=swap');
+
+:root{
+    --darkGreen: #61892f;
+    --lightGreen: #86c232;
+    --dark: #222629;
+    --darkGrey: #474b4f;
+    --lightGrey: #6b6e70;    
+    --font1: 'Roboto', sans-serif;
+    --font2: 'Itim', cursive;
+    --font3: 'Texturina', serif;
+}
+html , body{
+    margin: 0px;
+
+}
+
+header{
+
+}
+#navbar{
+    
+}
+#nav-icon{
+
+}
+#nav-icon img{
+    max-width: 90%;
+    max-height: 90%;
+}
+
+#nav-title{
+    height: 95%;
+    margin: 0px 3px;
+    font-size: 1rem;
+}
+#nav-desc{
+    height: 70%;
+    margin: 0px 3px;
+    padding: 10px 0px;
+}
+
+#main-section{
+    
+}
+#description-container{
+    height: 0%;
+    margin: 2px;
+}
+#chat-container{
+    flex-direction: column;
+    width: 90%;
+    height: 95%;
+    margin: 10px;
+}
+#room-status{
+    width: 95%;
+    height: 50%;
+    margin: 3px;
+}
+#channel-desc{
+    width: 95%;
+    margin: 3px;
+    height: 10%;
+    font-size: 0.8rem;
+    border-radius: 10px;
+
+}
+#leave-box{
+    width: 80%;
+    height: 5%;
+    margin: 10px;
+}
+#leave-box button{
+    height: 95%;
+    width: 70px;
+    font-size: 1rem;
+}
+#online-users{
+    width: 95%;
+    margin: 3px;
+    padding: 3px 0px;
+    height: 70%;
+}
+#online-users::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+
+#online-users::-webkit-scrollbar
+{
+	width: 5px;
+	background-color: #F5F5F5;
+}
+
+#online-users::-webkit-scrollbar-thumb
+{
+	background-color: var(--darkGrey);
+}
+
+.online-user{
+    padding: 0px 5px;
+    font-size: 0.8rem;
+    margin: 3px;
+    width: 80%;
+}
+#chat-inbox{
+    flex-direction: column;
+    width: 100%;
+    height: 80%;
+    margin: 5px;
+}
+#chat-box{
+    flex-direction: column;
+    width: 97%;
+    height: 90%;
+    margin: 3px 3px;
+    overflow-x: hidden;
+}
+#chat-box::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+
+#chat-box::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #F5F5F5;
+}
+
+#chat-box::-webkit-scrollbar-thumb
+{
+	background-color: var(--darkGrey);
+}
+
+.left-message-box-container{
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    margin: 5px 0px;
+}
+.right-message-box-container{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin: 5px 0px;
+}
+.left-message-container{
+    margin: 5px 5px;
+    max-width: 300px;
+    min-width: 80px;
+    word-break: break-all;
+}
+.right-message-container{
+    margin: 5px 5px;
+    max-width: 300px;
+    min-width: 80px;
+    word-break: break-all;
+}
+.message-info{
+    width: 95%;
+    height: 20%;
+    margin: 2px;
+}
+.message-username{
+    width: 80%;
+    padding-left: 3px;
+    font-size: 0.8rem;   
+}
+.message-time{
+    width: 40%;
+    font-size: 0.7rem;
+    padding: 0px 5px;
+}
+.message-box{
+    margin: 2px 5px;
+    font-size: 1rem;
+}
+#emoji-container{
+    flex-direction: column;
+    width: 95%;
+    height: 00%;
+    margin: 3px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.emoji-category{
+    margin: 3px;
+}
+.emoji-element{
+    margin: 1px 0px;
+    cursor: pointer;
+}
+.emoji-element:hover{
+    border: solid 1px var(--lightGreen);
+    border-radius: 10px;
+}
+#message-form-container{
+    flex-direction: column;
+    width: 95%;
+    height: 10%;
+    margin: 5px;
+}
+
+#message-form{
+    width: 98%;
+    height: 98%;
+
+}
+#message-input{
+    width: 70%;
+    height: 90%;
+    padding: 0px 10px;
+    font-size: 1rem;
+}
+#emoji-button{
+    height: 60%;
+    width: 10%;
+    margin: 3px;
+}
+#message-send-btn{
+    width: 15%;
+    height: 90%;
+    margin: 0px 5px;
+    font-size: 0.8rem;
+}
+
+#activity-container{
+
+}
+
+
+#section2{
+
+}
+footer{
+    display: flex;
+    width: 100%;
+    height: 2vh;
+    background-color: black;
+}
