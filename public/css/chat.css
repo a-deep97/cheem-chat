@@ -167,17 +167,20 @@ header{
 
 .online-user{
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     padding: 0px 10px;
     font-size: 1.5rem;
     margin: 5px;
     width: 80%;
+    padding: 0px 5px;
     color: white;
     font-weight: bold;
     background-color: var(--dark);
     border-radius: 10px;
     font-family: var(--font2);
+    overflow-x: hidden;
+    text-overflow: ellipsis;
 }
 #chat-inbox{
     display: flex;
@@ -238,43 +241,41 @@ header{
 .left-message-container{
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     flex-direction: column;
     margin: 5px 20px;
     margin-right: 60px;
     background-color: var(--lightGreen);
     border-radius: 10px;
     max-width: 600px;
-    min-width: 100px;
     word-break: break-all;
 }
 .right-message-container{
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     flex-direction: column;
     margin: 5px 20px;
     margin-left: 60px;
     background-color: var(--lightGreen);
     border-radius: 10px;
     max-width: 600px;
-    min-width: 100px;
     word-break: break-all;
 }
 .message-info{
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    width: 95%;
     height: 20%;
-    margin: 5px;
+    margin: 5px 0px;
+    width: 100%;
 }
 .message-username{
     display: flex;
     justify-content: flex-start;
     align-items: center;
     padding-left: 5px;
-    padding-right: 5px;
+    width: 90%;
     font-size: 1rem;
     font-weight: bold;
     color: white;
@@ -282,16 +283,18 @@ header{
 }
 .message-time{
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     align-items: center;
     font-size: 0.8rem;
+    width: 70px;
     padding-left: 10px;
     color: var(--lightGrey);
 }
 .message-box{
     display: flex;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-start;
+    width: 90%;
     margin: 2px 5px;
     font-size: 1.2rem;
     font-family: var(--font2);

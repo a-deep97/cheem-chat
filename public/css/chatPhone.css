@@ -38,9 +38,9 @@ header{
 }
 #nav-desc{
     height: 70%;
-    padding: 1rem;
     margin: 0px 3px;
     padding: 10px 0px;
+    font-size: 1rem;
 }
 
 #main-section{
@@ -107,6 +107,8 @@ header{
     font-size: 0.8rem;
     margin: 3px;
     width: 80%;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 #chat-inbox{
     flex-direction: column;
@@ -153,29 +155,33 @@ header{
 .left-message-container{
     margin: 5px 5px;
     max-width: 300px;
-    min-width: 80px;
     word-break: break-all;
 }
 .right-message-container{
     margin: 5px 5px;
     max-width: 300px;
-    min-width: 80px;
     word-break: break-all;
 }
 .message-info{
-    width: 95%;
-    height: 20%;
-    margin: 2px;
+    width: 100%;
 }
 .message-username{
-    padding-left: 5px;
-    padding-right: 5px;
-    font-size: 0.7rem;   
+    padding-left: 3px;
+    padding-right: 3px;
+    height: 100%;
+    width: 90%;
+    font-size: 0.6rem;
+    overflow: hidden;
+    text-overflow: ellipsis;   
 }
 .message-time{
-    font-size: 0.7rem;
-    padding-right: 10px;
-    padding-left: 5px;
+    font-size: 0.6rem;
+    padding-right: 5px;
+    height: 100%;
+    padding-left: 3px;
+    width: 50px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .message-box{
     margin: 2px 5px;
